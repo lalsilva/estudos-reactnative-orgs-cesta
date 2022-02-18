@@ -1,4 +1,4 @@
-import { StatusBar, SafeAreaView, View } from 'react-native';
+import { StatusBar, SafeAreaView } from 'react-native';
 import {
   useFonts,
   Montserrat_400Regular,
