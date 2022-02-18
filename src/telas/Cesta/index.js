@@ -1,24 +1,42 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { FlatList, View, StyleSheet } from 'react-native';
 
 import Topo from './componentes/Topo';
 import Detalhes from './componentes/Detalhes';
-import Itens from './componentes/Itens';
+import Item from './componentes/Item';
+import Texto from '../../componentes/Texto';
 
 export default function Cesta({ topo, detalhes, itens }) {
     return (
-        <ScrollView>
-            <Topo {...topo} />
-
-            <View style={estilos.cesta}>
-                <Detalhes {...detalhes} />
-                <Itens {...itens} />
-            </View>
-        </ScrollView>
+        <>
+            <FlatList
+                data={itens.lista}
+                renderItem={Item}
+                keyExtractor={({ nome }) => nome}
+                ListHeaderComponent={() => {
+                    return (
+                        <>
+                            <Topo {...topo} />
+                            <View style={estilos.cesta}>
+                                <Detalhes {...detalhes} />
+                                <Texto style={estilos.titulo}>{itens.titulo}</Texto>
+                            </View>
+                        </>
+                    )
+                }}
+            />
+        </>
     )
 }
 
 const estilos = StyleSheet.create({
+    titulo: {
+        marginTop: 32,
+        fontSize: 20,
+        fontWeight: 'bold',
+        lineHeight: 32,
+        color: '#464646'
+    },
     cesta: {
         paddingVertical: 8,
         paddingHorizontal: 16
