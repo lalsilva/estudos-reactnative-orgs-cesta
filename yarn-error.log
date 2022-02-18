@@ -1,0 +1,50 @@
+Arguments: 
+  /home/lasilva35/.nvm/versions/node/v17.3.0/bin/node /usr/local/bin/yarnpkg install
+
+PATH: 
+  /home/lasilva35/.nvm/versions/node/v17.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/Luiz Alberto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Luiz Alberto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Luiz Alberto/AppData/Local/atom/bin:/mnt/c/Users/Luiz Alberto/AppData/Local/Microsoft/WindowsApps:/snap/bin:/usr/lib/jvm/jdk-17.0.2/bin:/home/lasilva35/.yarn/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  17.3.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/expo: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141543:19)
+      at listOnTimeout (node:internal/timers:568:17)
+      at processTimers (node:internal/timers:510:7)
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "expo": "~44.0.0",
+      "expo-status-bar": "~1.2.0",
+      "react": "17.0.1",
+      "react-dom": "17.0.1",
+      "react-native": "0.64.3",
+      "react-native-web": "0.17.1"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
